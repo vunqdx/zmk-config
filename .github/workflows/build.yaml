@@ -48,32 +48,32 @@ jobs:
           args: 'zephyr-export'
       - name: West Build (Sputnik_B)
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
-        id: west-build-nice60
+        id: west-build-sputnikb
         with:
-          args: 'build "-s zmk/app -b nice60 -- -DZMK_CONFIG=/github/workspace/config"'
+          args: 'build "-s zmk/app -b sputnik_b -- -DZMK_CONFIG=/github/workspace/config"'
       - name: Rename Sputnik_B
-        run: sudo mv build/zephyr/zmk.uf2 build/zephyr/nice60zmk.uf2 && sudo mv build/zephyr/zmk.hex build/zephyr/nice60zmk.hex
+        run: sudo mv build/zephyr/zmk.uf2 build/zephyr/sputnik_bzmk.uf2 && sudo mv build/zephyr/zmk.hex build/zephyr/sputnik_bzmk.hex
       - name: Archive (Sputnik_B)
         uses: actions/upload-artifact@v2
         with:
-          name: nice60
+          name: sputnik_b
           path: |
-            build/zephyr/nice60zmk.uf2
-            build/zephyr/nice60zmk.hex
+            build/zephyr/sputnik_bzmk.uf2
+            build/zephyr/sputnik_bzmk.hex
       - name: West Build (Sputnik_B Shield)
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
-        id: west-build-nice60-shield
+        id: west-build-sputnikb-shield
         with:
-          args: 'build "--pristine -s zmk/app -b nice_nano -- -DSHIELD=nice60 -DZMK_CONFIG=/github/workspace/config"'
+          args: 'build "--pristine -s zmk/app -b sputnitk_b -- -DSHIELD=sputnik_b -DZMK_CONFIG=/github/workspace/config"'
       - name: Archive (Sputnik_B Shield)
         uses: actions/upload-artifact@v2
         with:
-          name: nice_nano_nice60
+          name: sputnik_b
           path: build/zephyr/zmk.uf2
       - name: Archive Sputnik_B Shield .config
         uses: actions/upload-artifact@v2
         with:
-          name: nice_nano_config
+          name: sputnik_b_config
           path: build/zephyr/.config
       - name: West Build (Lily58 Left)
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
