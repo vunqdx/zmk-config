@@ -1,0 +1,7 @@
+
+if SHIELD_SPUTNIK_B
+
+config ZMK_KEYBOARD_NAME
+	default "Sputnik_B"
+
+endif

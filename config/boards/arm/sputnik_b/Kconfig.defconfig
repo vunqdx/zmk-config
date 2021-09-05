@@ -1,10 +1,10 @@
-# Copyright (c) 2020 Nick Winans
+# Copyright (c) 2021 Nick Winans
 # SPDX-License-Identifier: MIT
 
-if BOARD_NICE60
+if BOARD_SPUTNIK_B
 
 config ZMK_KEYBOARD_NAME
-	default "nice!60"
+	default "Sputnik B"
 
 if USB
 
@@ -25,7 +25,7 @@ config ZMK_BLE
 config ZMK_USB
 	default y
 
-config ZMK_BATTERY_VOLTAGE_DIVIDER
+config ZMK_BATTERY_NRF_VDDH
 	default y
 
-endif # BOARD_NICE60
+endif # BOARD_SPUTNIK_B

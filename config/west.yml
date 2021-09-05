@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/innovaker
     - name: okke-formsma
       url-base: https://github.com/okke-formsma
+    - name: vunq
+      url-base: https://github.com/vunqdx
   projects:
     - name: zmk
       remote: zmkfirmware

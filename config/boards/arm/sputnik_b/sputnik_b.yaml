@@ -1,5 +1,5 @@
-identifier: nice60
-name: nice!60
+identifier: Sputnikb
+name: Sputnik_B
 type: mcu
 arch: arm
 toolchain:
